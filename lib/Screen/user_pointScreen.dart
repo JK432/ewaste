@@ -26,8 +26,9 @@ class _UserPointScreenState extends State<UserPointScreen> {
           children: [
             SizedBox(height: 10,),
             Row(
-              children: [Expanded(child: Container()),ButtonText(onTap: (){
-                Authentication().signOut(context);
+              children: [Expanded(child: Container()),ButtonText(onTap: ()async{
+                await Authentication().signOut(context);
+                Navigator.of(context).pop();
               },text: "LogOut",),SizedBox(width: 20,)],
             ),
             Container(

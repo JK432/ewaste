@@ -93,14 +93,6 @@ class _CmpnyHomepageState extends State<CmpnyHomepage> {
             items: [
               SideMenuItem(
                 priority: 0,
-                title: 'Dashboard',
-                onTap: (page, _) {
-                  sideMenu.changePage(page);
-                },
-                icon: const Icon(Icons.dashboard),
-              ),
-              SideMenuItem(
-                priority: 1,
                 title: 'Applied',
                 onTap: (page, _) {
                   sideMenu.changePage(page);
@@ -108,7 +100,7 @@ class _CmpnyHomepageState extends State<CmpnyHomepage> {
                 icon: const Icon(Icons.app_registration),
               ),
               SideMenuItem(
-                priority: 2,
+                priority: 1,
                 title: 'Claims',
                 onTap: (page, _) {
                   sideMenu.changePage(page);
@@ -116,15 +108,15 @@ class _CmpnyHomepageState extends State<CmpnyHomepage> {
                 icon: const Icon(Icons.request_page),
               ),
               SideMenuItem(
-                priority: 3,
-                title: 'Items',
+                priority: 2,
+                title: 'Data',
                 onTap: (page, _) {
                   sideMenu.changePage(page);
                 },
-                icon: const Icon(Icons.info_outline),
+                icon: const Icon(Icons.data_object_rounded),
               ),
               SideMenuItem(
-                priority: 4,
+                priority: 3,
                 title: 'Info',
                 icon: Icon(Icons.account_circle),
                 onTap: (page, _) {
@@ -137,15 +129,7 @@ class _CmpnyHomepageState extends State<CmpnyHomepage> {
             child: PageView(
               controller: page,
               children: [
-                Container(
-                  color: Colors.white,
-                  child: const Center(
-                    child: Text(
-                      'Dashboard',
-                      style: TextStyle(fontSize: 35),
-                    ),
-                  ),
-                ),
+
                 SingleChildScrollView(
                   child: Column(
                     children: [
@@ -293,20 +277,6 @@ class _CmpnyHomepageState extends State<CmpnyHomepage> {
                 ),
                 CmpnySettings(cmpny: cmpny,),
                 CmpnyInfopage(cmpny: cmpny,),
-
-
-
-
-                Container(
-                  color: Colors.white,
-                  child: const Center(
-                    child: Text(
-                      'Info',
-                      style: TextStyle(fontSize: 35),
-                    ),
-                  ),
-                ),
-
               ],
             ),
           ),

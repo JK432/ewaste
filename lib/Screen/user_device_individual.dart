@@ -89,29 +89,58 @@ class _UserDeviceScreenState extends State<UserDeviceScreen> {
                                                       }),
                                                 ],
                                               ),
-                                              SizedBox(
-                                                height: 20,
-                                              ),
-                                              Row(
+                                              device.mode=="Claim"?SizedBox(height: 20,): Column(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
-                                                  Text("Quantity :" ,style: GoogleFonts.signikaNegative(
-                                                      fontSize: 15,
-                                                      color: Palette.textl)),
                                                   SizedBox(
-                                                    width: 10,
+                                                    height: 20,
                                                   ),
-                                                  Text(
-                                                    device.qnty.toString(),
-                                                    style: GoogleFonts.signikaNegative(
-                                                        fontSize: 23,
-                                                        color: Palette.textd,
-                                                        height: 0.99),
+                                                  Row(
+                                                    children: [
+                                                      Text("Quantity :" ,style: GoogleFonts.signikaNegative(
+                                                          fontSize: 15,
+                                                          color: Palette.textl)),
+                                                      SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      Text(
+                                                        device.qnty.toString(),
+                                                        style: GoogleFonts.signikaNegative(
+                                                            fontSize: 23,
+                                                            color: Palette.textd,
+                                                            height: 0.99),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  SizedBox(
+                                                    height: 20,
                                                   ),
                                                 ],
                                               ),
-                                              SizedBox(
-                                                height: 20,
-                                              ),
+                                              // SizedBox(
+                                              //   height: 20,
+                                              // ),
+                                              // Row(
+                                              //   children: [
+                                              //     Text("Quantity :" ,style: GoogleFonts.signikaNegative(
+                                              //         fontSize: 15,
+                                              //         color: Palette.textl)),
+                                              //     SizedBox(
+                                              //       width: 10,
+                                              //     ),
+                                              //     Text(
+                                              //       device.qnty.toString(),
+                                              //       style: GoogleFonts.signikaNegative(
+                                              //           fontSize: 23,
+                                              //           color: Palette.textd,
+                                              //           height: 0.99),
+                                              //     ),
+                                              //   ],
+                                              // ),
+                                              // SizedBox(
+                                              //   height: 20,
+                                              // ),
                                               device.filelink.length == 0
                                                   ? Row(
                                                 children: [
@@ -297,27 +326,56 @@ class _UserDeviceScreenState extends State<UserDeviceScreen> {
                                                   ),
                                                 ],
                                               ),
-                                              SizedBox(
+                                              device.mode=="Claim"?SizedBox(
                                                 height: 20,
-                                              ),
-                                              Row(
+                                              ):  Column(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
-                                                  Text("Points :" ,style: GoogleFonts.signikaNegative(
-                                                      fontSize: 15,
-                                                      color: Palette.textl)),
                                                   SizedBox(
-                                                    width: 10,
+                                                    height: 20,
                                                   ),
-                                                  Text(
-                                                    "${device.point}",
-                                                    style: GoogleFonts.signikaNegative(
-                                                        fontSize: 23,
-                                                        color: Palette.textd,
-                                                        height: 0.99),
+                                                  Row(
+                                                    children: [
+                                                      Text("Points :" ,style: GoogleFonts.signikaNegative(
+                                                          fontSize: 15,
+                                                          color: Palette.textl)),
+                                                      SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      Text(
+                                                        "${device.point}",
+                                                        style: GoogleFonts.signikaNegative(
+                                                            fontSize: 23,
+                                                            color: Palette.textd,
+                                                            height: 0.99),
+                                                      ),
+                                                    ],
                                                   ),
+                                                  SizedBox(height: 10,)
                                                 ],
                                               ),
-                                              SizedBox(height: 10,)
+                                              // SizedBox(
+                                              //   height: 20,
+                                              // ),
+                                              // Row(
+                                              //   children: [
+                                              //     Text("Points :" ,style: GoogleFonts.signikaNegative(
+                                              //         fontSize: 15,
+                                              //         color: Palette.textl)),
+                                              //     SizedBox(
+                                              //       width: 10,
+                                              //     ),
+                                              //     Text(
+                                              //       "${device.point}",
+                                              //       style: GoogleFonts.signikaNegative(
+                                              //           fontSize: 23,
+                                              //           color: Palette.textd,
+                                              //           height: 0.99),
+                                              //     ),
+                                              //   ],
+                                              // ),
+                                              // SizedBox(height: 10,)
                                             ],
                                           ),
                                         ),
